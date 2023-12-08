@@ -18,16 +18,7 @@ def index_ECL():
 
 @app.route("/Test", methods=["GET", "POST"])
 def index_test():
-    return render_template("page_uefa.html", title="UEFA Champions League Draw")
-
-@app.route('/static/resultat_hoy_complet.json')
-def get_resultat():
-    try:
-        with open('static/PROBA/resultat_hoy_complet.json', 'r') as file:
-            data = file.read()
-            return jsonify(data)
-    except FileNotFoundError:
-        return jsonify({'error': 'File not found'}), 404
+    return render_template("test.html", title="UEFA Champions League Draw", l_b="UEFA Europa League", r_b="UEFA Europa Conference League", redirect_g="index_EL", redirect_d="index_ECL", bottom="index_test")
 
 
 if __name__ == '__main__':

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body id="mybody">
+  <section class="container">
+    <div class="bandetitre">
+
+      <form action="{{url_for(redirect_g)}}" method="post">
+        <button type="submit" class="boutonGauche">{{l_b}}</button>
+      </form>
+      <form action="{{url_for(redirect_d)}}" method="post">
+        <button type="submit" class="boutonDroite">{{r_b}}</button>
+      </form>
+      <h1>
+        {{title}}
+      </h1>
+    </div>
+  </section>
+  <div class="page" id="page">
+    <div class = "pressS">Press 'S' to show probability table.</div>
+    <div id="draw" class="great-box padding-box au-milieu left"></div>
+    <div id="select" class="great-box padding-box en-haut right">
+      <button type="button" class="boutonDeFonctionnalite margin pointer" id="selectRandomTeam">Choose random team</button>
+      <button type="button" class="boutonDeFonctionnalite margin disabled-button" id="removeTeam">Remove team</button>
+      <button type="button" class="boutonDeFonctionnalite margin disabled-button" id="reset">Reset</button>
+      <div class="medium-box-second-choice with-border"></div>
+      <p class="centered-text">Possible opponents</p>
+      <div id="second-choice" class="medium-box-second-choice"></div>
+    </div>
+    <div class="bottom-of-page">
+      <form action="{{url_for(bottom)}}" method="post">
+        <button type="submit" class="shiny-button">LIVE DRAW</button>
+      </form>
+    </div>
+    <script src="{{ url_for('static', filename='test.js') }}"></script>
+  </div>
+  <div id="blur" class="blur-effect hidden"></div>
+  <table id="overlay" class="overlay hidden"></table> 
+  </body>
+</html>

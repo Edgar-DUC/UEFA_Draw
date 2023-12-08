@@ -30,15 +30,6 @@ for(let m=0; m<8; m++){
         fakeProbabilities[m].push(12.5);
     }
 }
-var clock = document.createElement("div");
-clock.classList.add("animation");
-var animation1 = clock.animate(
-    [{ backgroundPosition: '200% 0' }, { backgroundPosition: '-200% 0' }],
-    {
-      duration: 4000,
-      iterations: Infinity
-    }
-  );
 
 var selectedTeams = [];   // Variable globale très dangereuse !!
 var opponentTeams = [];
