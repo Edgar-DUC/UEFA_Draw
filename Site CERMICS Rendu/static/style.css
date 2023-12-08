@@ -1,0 +1,352 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('image.jpg'); /* Specify the path to your image */
+    background-size: cover; /* This property ensures the image covers the entire background */
+    background-attachment: fixed; /* This property prevents the background from scrolling */
+  }
+
+.bandetitre {
+    background-color: #01153f; /* Couleur de fond blanche */
+    width: 100%; /* Largeur totale */
+    min-height : 30px;
+    max-height : 5vw;
+    height : 35px;
+    padding: 20px 0; /* Espacement intérieur en haut et en bas */
+    text-align: center; /* Centrer le texte horizontalement */
+    position: fixed; /* La bande reste fixée en haut de la page */
+    top: 0; /* Aligner la bande en haut de la page */
+    z-index: 1000; /* Assurer que la bande soit au premier plan */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    border-bottom: 2px solid #75b7fd;
+  }
+  
+  /* Style du titre */
+.bandetitre h1 {
+    margin: 0; /* Supprimer les marges par défaut du titre */
+    color: #ffffff; /* Couleur du texte */
+    font-family : "Trebuchet MS", sans-serif;
+  }
+
+  .boutonGauche {
+    margin-left: 20px; /* Espacement du bouton par rapport au bord gauche */
+    padding: 8px 16px; /* Ajustement du rembourrage */
+    background-color: #333; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: 2px solid #ffffff; /* Suppression des bordures */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur au survol */
+    font-size: 14px; /* Taille de la police */
+    font-family : "Trebuchet MS", sans-serif;
+    float : left;
+  }
+
+  .boutonDroite {
+    margin-right: 20px; /* Espacement du bouton par rapport au bord gauche */
+    padding: 8px 16px; /* Ajustement du rembourrage */
+    background-color: #333; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: 2px solid #ffffff; /* Suppression des bordures */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur au survol */
+    font-size: 14px; /* Taille de la police */
+    font-family : "Trebuchet MS", sans-serif;
+    float : right;
+  }
+
+  .disabled{
+    opacity : 0.5;
+  }
+
+  .disabled-button{
+    opacity : 0.5;
+    cursor:default;
+  }
+
+  .page {
+    display: flex;
+    position:relative;
+    top : 60px;
+    width : 100%;
+    height : 120vh;
+  }
+
+  .boutonDeFonctionnalite {
+    padding: 8px 16px; /* Ajustement du rembourrage */
+    background-color: #333; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: 2px solid #75b7fd; /* Suppression des bordures */
+    border-radius: 4px; /* Coins arrondis */
+    font-size: 14px; /* Taille de la police */
+    font-family : "Trebuchet MS", sans-serif;
+  }
+
+  .pointer {
+    cursor: pointer; /* Curseur pointeur au survol */
+  }
+
+.great-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh - 60px; /* Adjust the height as needed */
+    position: absolute;
+    top : 0;
+  }
+
+  .left{
+    left : 0px;
+    right : 35%;
+  }
+
+  .right{
+    right : 0px;
+    left : 65%;
+  }
+
+  .padding-box{
+    padding : 5vw;
+  }
+
+.medium-box {
+  display:flex;
+  flex-direction:row;
+  height: 50px;
+  align-items:center;
+}
+
+.medium-box-second-choice{
+  box-sizing : border-box;
+  width : 100%;
+  margin-top: 10px;
+}
+
+.centered-text{
+  text-align: left;
+
+  font-size: 10px;
+  padding-top: 2px;
+  font-family : "Trebuchet MS", sans-serif;
+  color : #fff;
+  height:12px;
+  margin : 0;
+}
+
+.with-border{
+  border: 1px solid #fefefe;
+}
+
+.en-haut{
+  align-items: flex-start;
+}
+
+.au-milieu{
+  align-items : center;
+}
+
+.margin{
+  margin : 10px;
+}
+
+.line-box{
+  width:100px;
+  height:0px;
+  border:1px solid #75b7fd;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.little-left-box {
+  border : 2px solid #75b7fd;
+    font-family : "Trebuchet MS", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    width: 300px; /* Change width to your preference */
+    height: 40px;
+    background-color: #121212; /* Dark grey background */
+    color: #fff; /* White text */
+    text-align: center;
+    display : flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    position: relative; /* Enable positioning for the logo */
+}
+
+.little-right-box {
+  border : 2px solid #75b7fd;
+    font-family : "Trebuchet MS", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    width: 300px; /* Change width to your preference */
+    height: 40px;
+    background-color: #121212; /* Dark grey background */
+    color: #fff; /* White text */
+    text-align: center;
+    display : flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    position: relative; /* Enable positioning for the logo */
+}
+
+.little-right-box::after {
+  content: ""; /* Necessary for pseudo-element */
+  position: absolute;
+  top: 5px; /* Adjust top position of the logo */
+  right: 10px; /* Adjust left position of the logo */
+  width: 30px; /* Adjust width of the logo */
+  height: 30px; /* Adjust height of the logo */
+  background-image: url('logo.png'); /* Add the path to your logo */
+  background-size: cover;
+  background-position: center;
+}
+
+.little-left-box::before {
+  content: ""; /* Necessary for pseudo-element */
+  position: absolute;
+  top: 5px; /* Adjust top position of the logo */
+  left: 10px; /* Adjust left position of the logo */
+  width: 30px; /* Adjust width of the logo */
+  height: 30px; /* Adjust height of the logo */
+  background-image: url('logo.png'); /* Add the path to your logo */
+  background-size: cover;
+  background-position: center;
+}
+
+.little-middle-box{
+    font-family : "Trebuchet MS", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100px; /* Change width to your preference */
+    height: 40px;
+    display : flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    position: relative;
+}
+
+.probability-box{
+  position:absolute;
+  top:0;
+  height : 15px;
+  width:100px;
+  text-align: center;
+  color : #ff0000;
+}
+
+.overlay {
+  position: absolute;
+  top: 95px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 500;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Hide the overlay by default */
+.hidden {
+  display: none;
+}
+
+.blur-effect {
+  backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+  /* background-color: rgba(255, 255, 255, 0.5); Adjust the background color and opacity as needed */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 250; /* Adjust the z-index to make sure it covers other elements */
+}
+
+.pointer-events{
+  pointer-events: none;
+}
+
+.pressS{
+  z-index : 500;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  font-size: 13px;
+  font-family : "Trebuchet MS", sans-serif;
+  color : #fff;
+  margin : 0;
+  position:absolute;
+  top:26px;
+}
+
+.bottom-of-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width : 100%;
+    position:absolute;
+    bottom : 50px;
+}
+
+.shiny-button {
+  border : 2px solid rgb(116, 6, 0);
+  font-family : "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+  display : flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+
+  position: relative;
+  padding: 20px 40px;
+  font-size: 32px;
+  background-color: #1e0000;
+  color: rgb(255, 136, 136);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.shiny-button::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), transparent, rgba(255, 255, 255, 0.5));
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.shiny-button:hover::before {
+  opacity: 1;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+}
+
+th, td {
+  border: 2px solid #75b7fd; /* Bleu clair */
+  padding: 10px;
+  text-align: center;
+  background-color: #121212; /* Noir */
+  color: #fff; /* Blanc */
+  font-family : "Trebuchet MS", sans-serif;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.animation{
+    background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 4s infinite;
+    will-change: background-position;
+}
