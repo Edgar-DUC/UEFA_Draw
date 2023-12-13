@@ -847,10 +847,10 @@ function add_team_to_list_match(bouton){
             let cellule = document.getElementById(id);
             let proba = parseFloat(cellule.textContent)
             if(proba !== 0){
-                button.style.display="block"
+                button.style.display="inline"
             }
         }
-        else{button.style.display="block"}
+        else{button.style.display="inline"}
     })
     chosen_team.push(bouton)    // Rajoute l'équipe dans les équipes choisies
     // J'actualise toutes les probas
@@ -1114,7 +1114,7 @@ undo_button.addEventListener("click", function(event){
                 if (cell) {
                     let nombre = Number(cell.textContent.slice(0, -1));// = resultat[index][index2]
                     if (nombre !== 0) {
-                        bouton.style.display = "block"
+                        bouton.style.display = "inline"
                     }
                 } else {
                     console.log("la cellule n'existe pas")
@@ -1125,7 +1125,7 @@ undo_button.addEventListener("click", function(event){
         })
         boutons_runner.forEach(function (bouton) {
             if (!affichage_winners) {
-                bouton.style.display = "block"
+                bouton.style.display = "inline"
             } else {
                 disappear_bouton(bouton)
             }
@@ -1139,6 +1139,7 @@ undo_button.addEventListener("click", function(event){
         //fill_all()
         fill_all2()
         heatmap()
+        handleClickTable();
 
         if(chosen_team.length == 0){
             document.getElementById('removeTeam').classList.remove('pointer');
@@ -1241,6 +1242,7 @@ restart_button.addEventListener("click",function(event){
 fill_all2()
 verif_zero()
 heatmap();
+handleClickTable();
 for(let i=0; i<runners_resultat.length;i++){
     firstProb.push([]);
     for(let j=0; j<runners_resultat.length;j++){
