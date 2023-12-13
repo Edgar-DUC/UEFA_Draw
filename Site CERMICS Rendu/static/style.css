@@ -350,3 +350,7 @@ th, td {
     animation: shimmer 4s infinite;
     will-change: background-position;
 }
+
+.border-emphasize{
+  border: 2px solid #fd5007 !important;
+}
