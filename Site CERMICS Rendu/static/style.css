@@ -193,11 +193,11 @@ body {
 .little-right-box::after {
   content: ""; /* Necessary for pseudo-element */
   position: absolute;
-  top: 5px; /* Adjust top position of the logo */
+  top: 7px; /* Adjust top position of the logo */
   right: 10px; /* Adjust left position of the logo */
-  width: 30px; /* Adjust width of the logo */
-  height: 30px; /* Adjust height of the logo */
-  background-image: url('logo.png'); /* Add the path to your logo */
+  width: 22px; /* Adjust width of the logo */
+  height: 22px; /* Adjust height of the logo */
+  background-image: url('ball.png'); /* Add the path to your logo */
   background-size: cover;
   background-position: center;
 }
@@ -205,11 +205,11 @@ body {
 .little-left-box::before {
   content: ""; /* Necessary for pseudo-element */
   position: absolute;
-  top: 5px; /* Adjust top position of the logo */
+  top: 7px; /* Adjust top position of the logo */
   left: 10px; /* Adjust left position of the logo */
-  width: 30px; /* Adjust width of the logo */
-  height: 30px; /* Adjust height of the logo */
-  background-image: url('logo.png'); /* Add the path to your logo */
+  width: 22px; /* Adjust width of the logo */
+  height: 22px; /* Adjust height of the logo */
+  background-image: url('ball.png'); /* Add the path to your logo */
   background-size: cover;
   background-position: center;
 }

@@ -76,6 +76,8 @@ function fill_all2(){
         }
     }
     for(let k=0;k<runners_resultat.length;k++){
+        console.log(k);
+        console.log(Math.floor(chosen_team.length/2));
         if(k<Math.floor(chosen_team.length/2)){
             const ind1 = runners_resultat.indexOf(chosen_team[2*k].textContent);
             const ind2 = winners_resultat.indexOf(chosen_team[2*k+1].textContent);
@@ -854,12 +856,13 @@ function add_team_to_list_match(bouton){
     })
     chosen_team.push(bouton)    // Rajoute l'équipe dans les équipes choisies
     // J'actualise toutes les probas
-    if(chosen_team.length<Runners_up.length+Winners.length-3) {
         //change_all()
         //fill_all()
-        fill_all2()
-    }else{
-        fill_end()
+    if(chosen_team.length<runners_resultat.length+winners_resultat.length-1){
+        fill_all2();
+    }
+    else{
+        fill_end();
     }
     // Ajoute la liste des matchs en fonction des clics de l'utilisateur
     let number = chosen_team.length
