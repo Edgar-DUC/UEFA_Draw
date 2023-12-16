@@ -97,7 +97,6 @@ body {
     flex-direction: column;
     justify-content: center;
     position:absolute;
-    height : 120vh - 80px;
     top:0;
   }
 
@@ -303,7 +302,7 @@ body {
     align-items: center;
     width : 100%;
     position:absolute;
-    top : 90vh;
+    top : 500px;
 }
 
 .shiny-button {
