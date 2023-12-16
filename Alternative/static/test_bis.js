@@ -1150,6 +1150,10 @@ undo_button.addEventListener("click", function(event){
             document.getElementById('reset').classList.remove('pointer');
             document.getElementById('reset').classList.add('disabled-button');
         }
+        else{
+            document.getElementById((chosen_team.length-1).toString()).classList.remove('disabled');
+            document.getElementById((chosen_team.length-1).toString()).classList.add("animation");
+        }
     }
 })
 
