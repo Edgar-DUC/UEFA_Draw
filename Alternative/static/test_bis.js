@@ -1,7 +1,7 @@
 // Test du chargement des probas:
 
 // Remplacez le chemin par le chemin absolu vers votre fichier JSON
-const url = "static/PROBA/isom_bis.json";
+const url = "static/PROBA/isom.json";
 let xhr = new XMLHttpRequest();
 xhr.overrideMimeType("application/json");
 xhr.open("GET", url, false); // Notez-le "false" pour le mode synchrone

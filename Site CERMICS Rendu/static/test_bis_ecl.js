@@ -1,7 +1,7 @@
 // Test du chargement des probas:
 
 // Remplacez le chemin par le chemin absolu vers votre fichier JSON
-const url = "static/PROBA/isom.json";
+const url = "static/PROBA/isom_ecl.json";
 let xhr = new XMLHttpRequest();
 xhr.overrideMimeType("application/json");
 xhr.open("GET", url, false); // Notez-le "false" pour le mode synchrone
@@ -15,7 +15,7 @@ if (xhr.status === 200) {
   console.error('Erreur de chargement du fichier JSON resultat');
 }
 
-const url_teams = "static/PROBA/teams.json";
+const url_teams = "static/PROBA/teams_ecl.json";
 let xhr_teams = new XMLHttpRequest();
 xhr_teams.overrideMimeType("application/json");
 xhr_teams.open("GET", url_teams, false); // Notez-le "false" pour le mode synchrone
