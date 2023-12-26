@@ -1107,7 +1107,7 @@ undo_button.addEventListener("click", function(event){
                 // il faut que je rajoute une condition ici
                 // test si (proba(chosen_team[last],bouton) !== 0): on affiche le bouton sinon on le fait
                 let runner = chosen_team[chosen_team.length - 1].textContent
-                let id = 'l'+runners_resultat.indexOf(runner) + 'c' + winners_resultat.indexOf(bouton.textContent)
+                let id = 'l'+(runners_resultat.indexOf(runner)+1) + 'c' + (winners_resultat.indexOf(bouton.textContent)+1)
                 let cell = document.getElementById(id)
                 //console.log(cell.id)
                 let index = remove_from_list()

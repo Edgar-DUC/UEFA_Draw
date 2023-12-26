@@ -1102,12 +1102,13 @@ undo_button.addEventListener("click", function(event){
             boutons_winners.push(last_team_chosen)
         }
         affichage_winners = !affichage_winners      // on rebascule sur l'affichage des autres teams
+        fill_all2()
         boutons_winners.forEach(function (bouton) {   // on change les modes d'affichage des boutons
             if (affichage_winners) {
                 // il faut que je rajoute une condition ici
                 // test si (proba(chosen_team[last],bouton) !== 0): on affiche le bouton sinon on le fait
                 let runner = chosen_team[chosen_team.length - 1].textContent
-                let id = 'l'+runners_resultat.indexOf(runner) + 'c' + winners_resultat.indexOf(bouton.textContent)
+                let id = 'l'+(runners_resultat.indexOf(runner)+1) + 'c' + (winners_resultat.indexOf(bouton.textContent)+1)
                 let cell = document.getElementById(id)
                 //console.log(cell.id)
                 let index = remove_from_list()
@@ -1140,7 +1141,6 @@ undo_button.addEventListener("click", function(event){
         cell.textContent = ""
         //change_all()
         //fill_all()
-        fill_all2()
         heatmap()
         handleClickTable();
 
